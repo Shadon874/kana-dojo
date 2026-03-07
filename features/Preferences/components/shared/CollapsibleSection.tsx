@@ -19,20 +19,20 @@ interface CollapsibleSectionProps {
 
 const levelStyles = {
   section: {
-    header: 'text-3xl py-4',
-    border: 'border-b-2 border-(--border-color)',
+    header: 'text-3xl py-4 pl-4',
+    border: 'border-l-20 border-(--border-color)',
     chevronSize: 24,
     gap: 'gap-4',
   },
   subsection: {
-    header: 'text-2xl py-3',
-    border: 'border-b-1 border-(--border-color)',
+    header: 'text-2xl py-3 pl-4',
+    border: 'border-l-10 border-(--border-color)',
     chevronSize: 22,
     gap: 'gap-3',
   },
   subsubsection: {
-    header: 'text-xl py-2',
-    border: '',
+    header: 'text-xl py-2 pl-4',
+    border: 'border-l-5 border-(--border-color)',
     chevronSize: 20,
     gap: 'gap-2',
   },
@@ -83,7 +83,7 @@ const CollapsibleSection = ({
           'hover:cursor-pointer',
           styles.header,
           fullBorder
-            ? 'border-l-6 border-(--border-color) px-4 py-3'
+            ? 'border-l-20 border-(--border-color) px-4 py-3'
             : styles.border,
         )}
         onClick={handleToggle}
@@ -93,8 +93,9 @@ const CollapsibleSection = ({
           className={clsx(
             'transition-transform duration-300 ease-out',
             'transition-colors delay-200 duration-300',
-            'text-(--main-color)',
+            'text-(--border-color)',
             'max-md:group-active:text-(--main-color)',
+            'max-md:group-focus-visible:text-(--main-color)',
             'md:group-hover:text-(--main-color)',
             !isOpen && 'rotate-180',
           )}
@@ -116,7 +117,7 @@ const CollapsibleSection = ({
       <div
         className={clsx(
           'grid overflow-hidden',
-          'transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]',
+          'transition-[grid-template-rows,opacity] duration-500 ease-in-out',
           isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0',
         )}
       >
