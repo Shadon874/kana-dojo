@@ -53,14 +53,13 @@ export default function DonationModal({
               </p>
               <p className='text-base leading-7 text-(--secondary-color)'>
                 From day one, we have poured care into making this a fully
-                free, open-source, and ad-free learning resource for everyone
-                — a sincere alternative to Duolingo that respects learners,
+                free, open-source, and ad-free learning resource for everyone and a sincere alternative to Duolingo that respects learners,
                 and we are wholeheartedly committed to keeping it that way
                 forever.
               </p>
               <p className='text-base leading-7 text-(--secondary-color)'>
                 Even the smallest gift means a great deal to us, helping us
-                keep KanaDojo welcoming, accessible, and lovingly maintained
+                keep KanaDojo welcoming, accessible and lovingly maintained
                 for the people who rely on it.
               </p>
             </div>
@@ -69,8 +68,8 @@ export default function DonationModal({
               <ActionButton
                 colorScheme='main'
                 borderColorScheme='main'
-                borderRadius='2xl'
-                borderBottomThickness={14}
+                borderRadius='3xl'
+                borderBottomThickness={16}
                 className='px-5 py-4 text-lg font-semibold sm:w-auto'
               >
                 <a
@@ -80,12 +79,12 @@ export default function DonationModal({
                   onClick={playClick}
                   className='inline-flex items-center gap-2'
                 >
-                  <Heart className='size-5 fill-current animate-[jump_1s_ease-in-out_infinite]' />
+                  <Heart className='size-5 fill-current animate-bounce' />
                   Donate on Ko-fi
                   <svg
                     aria-hidden='true'
                     viewBox='0 0 24 24'
-                    className='size-5'
+                    className='size-5 mt-0.5'
                     fill='none'
                     stroke='currentColor'
                     strokeWidth='2'
